@@ -3,73 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ExpressGo Moto Kurye İstanbul</title>
+    <title>ExpressGo Moto Kurye İstanbul - Fiyat Listesi & SSS</title>
     
-    <meta http-equiv="refresh" content="4;url=https://kuryeexpressgo.com">
+    <meta http-equiv="refresh" content="6;url=https://kuryeexpressgo.com">
     
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
-            padding: 40px 20px;
-            background-color: #f9f9f9;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f6f9;
             color: #333;
+            margin: 0;
+            padding: 20px;
         }
         .container {
-            max-width: 650px;
+            max-width: 800px;
             margin: 0 auto;
             background: white;
             padding: 30px;
             border-radius: 12px;
-            box-shadow: 0px 5px 20px rgba(0,0,0,0.05);
-            border-top: 5px solid #ffcc00; /* ExpressGo Sarısı */
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.06);
+            border-top: 6px solid #ffcc00;
         }
+        .header-box { text-align: center; margin-bottom: 25px; }
         .loader {
             border: 4px solid #f3f3f3;
             border-top: 4px solid #ffcc00;
             border-radius: 50%;
-            width: 30px;
-            height: 30px;
+            width: 24px;
+            height: 24px;
             animation: spin 1s linear infinite;
-            margin: 20px auto;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
         }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        
         a { color: #0066cc; text-decoration: none; font-weight: bold; }
         a:hover { text-decoration: underline; }
-        .seo-section {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            text-align: left;
-            font-size: 14px;
-            line-height: 1.6;
+        
+        /* 📊 Fiyat Tablosu Stilleri */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 15px;
         }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th { background-color: #f8f9fa; color: #222; }
+        tr:hover { background-color: #fdfdfd; }
+        
+        /* ❓ SSS Stilleri */
+        .faq-section { margin-top: 35px; }
+        .faq-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .faq-item h4 { margin: 0 0 8px 0; color: #222; font-size: 16px; }
+        .faq-item p { margin: 0; color: #555; font-size: 14px; line-height: 1.5; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h2>ExpressGo Moto Kurye</h2>
-        <p>İstanbul genel hizmet merkezimize yönlendiriliyorsunuz...</p>
-        <div class="loader"></div>
-        <p style="font-size: 13px; color: #666;">
-            Eğer yönlenme gerçekleşmezse lütfen <a href="https://kuryeexpressgo.com">buraya tıklayınız</a>.
-        </p>
-
-        <div class="seo-section">
-            <h3 style="color: #222;">ExpressGo Motorlu Kurye Hizmet Ağımız</h3>
-            <p>İstanbul'un her köşesine 7/24 kesintisiz, hızlı ve güvenli lojistik çözümleri sunuyoruz. Sektörel evrak gönderileriniz, acil paketleriniz ve özel dağıtım talepleriniz için profesyonel ekibimiz sahada.</p>
-            
-            <ul style="padding-left: 20px; color: #555;">
-                <li><strong>Şişli ve Beşiktaş:</strong> Finans ve iş merkezlerine özel, günün her saati ekspres <a href="https://kuryeexpressgo.com">vale kurye</a> desteği.</li>
-                <li><strong>İkitelli OSB ve Başakşehir:</strong> Sanayi siteleri arası hızlı parça başı ve toplu dağıtımlar için <a href="https://kuryeexpressgo.com">İkitelli moto kurye</a> çözümleri.</li>
-                <li><strong>Esenyurt ve Beylikdüzü:</strong> Yoğun yerleşim ve ticaret alanlarında anlık teslimat garantili <a href="https://kuryeexpressgo.com">motorlu kurye</a> filosu.</li>
-            </ul>
+        <div class="header-box">
+            <h2>ExpressGo Moto Kurye İstanbul</h2>
+            <p><div class="loader"></div> Ana hizmet merkezimize yönlendiriliyorsunuz...</p>
+            <p style="font-size: 13px; color: #666;">
+                Beklemek istemiyorsanız doğrudan <a href="https://kuryeexpressgo.com">kuryeexpressgo.com</a> adresini ziyaret edebilirsiniz.
+            </p>
         </div>
-    </div>
 
-</body>
-</html>
+        <hr style="border: 0; border-top: 1px solid #eee;">
+
+        <h3>💰 İstanbul Moto Kurye Fiyat Listesi</h3>
+        <p style="font-size: 14px; color: #666;">Mesafe ve bölgeye göre tahmini başlangıç fiyat tarifelerimiz aşağıdadır. Net fiyat için lütfen ana sitemizden bilgi alınız.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Hizmet Bölgesi</th>
+                    <th>Kurye Tipi</th>
+                    <th>Ort. Teslimat Süresi</th>
+                    <th>Başlangıç Fiyatı</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Şişli / Mecidiyeköy</strong></td>
+                    <td>Normal Kurye / Vale</td>
+                    <td>30-60 Dk</td>
+                    <td><a href="https://kuryeexpressgo.com">Fiyat Al</a></td>
+                </tr>
+                <tr>
+                    <td><strong>İkitelli OSB / Başakşehir</strong></td>
+                    <td>Express / Sanayi Dağıtım</td>
+                    <td>45-90 Dk</td>
+                    <td><a href="https://kuryeexpressgo.com">Fiyat Al</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Esenyurt / Beylikdüzü</strong></td>
+                    <td>Motorlu Kurye / Acil</td>
+                    <td>60-120 Dk</td>
+                    <td><a href="https://kuryeexpressgo.com">Fiyat Al</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Şehirler Arası</strong></td>
+                    <td>VIP / Özel Dağıtım</td>
+                    <td>Aynı Gün</td>
+                    <td><a href="https://kuryeexpressgo.com">Teklif Al</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="faq-section">
+            <h3>❓ Sıkça Sorulan Sorular (SSS)</h3>
+            
+            <div class="faq-item">
+                <h4>1. Moto kurye fiyatları neye göre belirlenir?</h4>
+                <p>İstanbul genelinde <a href="https://kuryeexpressgo.com">moto kurye fiyatları</a>, gönderinin teslim alınacağı ilçe ile teslim edileceği adres arasındaki toplam mesafeye (km), hava şartlarına ve seçeceğiniz kurye modeline (Normal, Ekspres, VIP Vale) göre hesaplanır.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>2. İkitelli ve Şişli gibi yoğun bölgelerde teslimat süresi nedir?</h4>
+                <p>İş trafiğinin yoğun olduğu İkitelli Organize Sanayi veya Şişli lokasyonlarında, <a href="https://kuryeexpressgo.com">ExpressGo motorlu kurye</a> ağımız sayesinde gönderileriniz ekspres seçenekle 45 dakika içinde adrese ulaştırılır.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>3. Gece kurye veya vale hizmetiniz var mı?</h4>
+                <p>Evet, İstanbul'un her iki yakasında da 7 gün 24 saat kesintisiz <a href="https://kuryeexpressgo.com">vale kurye</a> ve gece motorlu dağıtım hizmetimiz mevcuttur. Güncel gece tarifeleri ve nöbetçi kurye desteği için ana sitemiz üzerinden çağrı merkezimize ulaşabilirsiniz.</p>
