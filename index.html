@@ -5,44 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ExpressGo Moto Kurye İstanbul</title>
     
-    <meta http-equiv="refresh" content="0;url=https://kuryeexpressgo.com">
+    <meta http-equiv="refresh" content="4;url=https://kuryeexpressgo.com">
     
-    <script type="text/javascript">
-        window.location.href = "https://kuryeexpressgo.com";
-    </script>
-
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
-            padding: 50px;
-            background-color: #f4f4f4;
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+            color: #333;
         }
-        .loading-box {
+        .container {
+            max-width: 650px;
+            margin: 0 auto;
             background: white;
             padding: 30px;
-            border-radius: 8px;
-            display: inline-block;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0px 5px 20px rgba(0,0,0,0.05);
+            border-top: 5px solid #ffcc00; /* ExpressGo Sarısı */
         }
-        a { color: #ff0000; text-decoration: none; font-weight: bold; }
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #ffcc00;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        a { color: #0066cc; text-decoration: none; font-weight: bold; }
+        a:hover { text-decoration: underline; }
+        .seo-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: left;
+            font-size: 14px;
+            line-height: 1.6;
+        }
     </style>
 </head>
 <body>
 
-    <div class="loading-box">
-        <h2>ExpressGo Moto Kurye Merkezine Yönlendiriliyorsunuz...</h2>
-        <p>Eğer 3 saniye içinde yönlenme gerçekleşmezse <a href="https://kuryeexpressgo.com">buraya tıklayınız</a>.</p>
-    </div>
+    <div class="container">
+        <h2>ExpressGo Moto Kurye</h2>
+        <p>İstanbul genel hizmet merkezimize yönlendiriliyorsunuz...</p>
+        <div class="loader"></div>
+        <p style="font-size: 13px; color: #666;">
+            Eğer yönlenme gerçekleşmezse lütfen <a href="https://kuryeexpressgo.com">buraya tıklayınız</a>.
+        </p>
 
-    <div style="margin-top: 100px; opacity: 0.8; font-size: 12px; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto;">
-        <h3>İstanbul Bölgesel Motorlu Kurye Hizmetleri</h3>
-        <p>İstanbul genelinde acil evrak, paket ve numune taşımacılığında öncü <a href="https://kuryeexpressgo.com">ExpressGo Moto Kurye</a>, 7/24 kesintisiz hizmet sunar.</p>
-        <ul>
-            <li>Şişli, Mecidiyeköy ve Beşiktaş bölgelerinde acil <a href="https://kuryeexpressgo.com">vale kurye</a> ve motorlu dağıtım çözümleri.</li>
-            <li>İkitelli Organize Sanayi Bölgesi ve Başakşehir genelinde güvenli <a href="https://kuryeexpressgo.com">İkitelli moto kurye</a> servisleri.</li>
-            <li>Esenyurt, Beylikdüzü ve Avcılar lokasyonlarında hızlı teslimat garantili <a href="https://kuryeexpressgo.com">motorlu kurye</a> ağı.</li>
-        </ul>
+        <div class="seo-section">
+            <h3 style="color: #222;">ExpressGo Motorlu Kurye Hizmet Ağımız</h3>
+            <p>İstanbul'un her köşesine 7/24 kesintisiz, hızlı ve güvenli lojistik çözümleri sunuyoruz. Sektörel evrak gönderileriniz, acil paketleriniz ve özel dağıtım talepleriniz için profesyonel ekibimiz sahada.</p>
+            
+            <ul style="padding-left: 20px; color: #555;">
+                <li><strong>Şişli ve Beşiktaş:</strong> Finans ve iş merkezlerine özel, günün her saati ekspres <a href="https://kuryeexpressgo.com">vale kurye</a> desteği.</li>
+                <li><strong>İkitelli OSB ve Başakşehir:</strong> Sanayi siteleri arası hızlı parça başı ve toplu dağıtımlar için <a href="https://kuryeexpressgo.com">İkitelli moto kurye</a> çözümleri.</li>
+                <li><strong>Esenyurt ve Beylikdüzü:</strong> Yoğun yerleşim ve ticaret alanlarında anlık teslimat garantili <a href="https://kuryeexpressgo.com">motorlu kurye</a> filosu.</li>
+            </ul>
+        </div>
     </div>
 
 </body>
