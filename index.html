@@ -1,137 +1,321 @@
+```html
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ExpressGo Moto Kurye İstanbul - Fiyat Listesi & SSS</title>
-    
-    <meta http-equiv="refresh" content="6;url=https://kuryeexpressgo.com">
-    
-    <style>
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: #f4f6f9;
-            color: #333;
-            margin: 0;
-            padding: 20px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>ExpressGo Kurye | İstanbul Moto Kurye & Acil Kurye Hizmeti</title>
+  <meta name="description" content="İstanbul'da hızlı ve güvenilir moto kurye, acil kurye, evrak kurye ve kurumsal kurye hizmetleri. Esenyurt, Bahçeşehir, İkitelli, Başakşehir ve tüm İstanbul'da 7/24 hizmet.">
+  <link rel="canonical" href="https://kuryeexpressgo.com/">
+  <meta property="og:title" content="ExpressGo Kurye - İstanbul Moto Kurye & Acil Kurye">
+  <meta property="og:description" content="İstanbul'un her noktasına hızlı moto kurye, acil kurye ve evrak teslimi. Güvenilir, ekonomik ve 7/24 hizmet.">
+  <meta property="og:image" content="https://kuryeexpressgo.com/og-image.jpg">
+  <meta property="og:url" content="https://kuryeexpressgo.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ExpressGo Kurye - İstanbul Moto Kurye">
+  <meta name="twitter:description" content="İstanbul'da acil kurye, evrak kurye ve kurumsal teslimat hizmetleri. Hızlı, güvenli, 7/24.">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="style.css">
+  <!-- Schema.org LocalBusiness JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ExpressGo Kurye",
+    "description": "İstanbul genelinde moto kurye, acil kurye, evrak kurye ve kurumsal kurye hizmetleri.",
+    "image": "https://kuryeexpressgo.com/logo.png",
+    "telephone": "+905421073826",
+    "email": "info@kuryeexpressgo.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "İstanbul",
+      "addressCountry": "TR"
+    },
+    "url": "https://kuryeexpressgo.com",
+    "sameAs": [
+      "https://www.instagram.com/expressgokurye",
+      "https://www.facebook.com/expressgokurye"
+    ],
+    "priceRange": "₺₺",
+    "openingHours": "Mo-Su 00:00-23:59",
+    "areaServed": {
+      "@type": "City",
+      "name": "İstanbul"
+    }
+  }
+  </script>
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://kuryeexpressgo.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Hizmetler", "item": "https://kuryeexpressgo.com/#services" },
+      { "@type": "ListItem", "position": 3, "name": "İstanbul Moto Kurye", "item": "https://kuryeexpressgo.com/#moto-kurye" }
+    ]
+  }
+  </script>
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "ExpressGo Kurye hangi bölgelerde hizmet veriyor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Esenyurt, Bahçeşehir, İkitelli, Başakşehir, Beylikdüzü, Avcılar, Merter, Şişli ve tüm İstanbul genelinde 7/24 hizmet vermekteyiz."
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0px 4px 15px rgba(0,0,0,0.06);
-            border-top: 6px solid #ffcc00;
+      },
+      {
+        "@type": "Question",
+        "name": "Acil kurye hizmetiniz var mı?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet, acil kurye hizmetimiz mevcuttur. İstanbul'un her noktasına en hızlı şekilde ulaşarak teslimatınızı gerçekleştiririz."
         }
-        .header-box { text-align: center; margin-bottom: 25px; }
-        .loader {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #ffcc00;
-            border-radius: 50%;
-            width: 24px;
-            height: 24px;
-            animation: spin 1s linear infinite;
-            display: inline-block;
-            vertical-align: middle;
-            margin-right: 10px;
-        }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        
-        a { color: #0066cc; text-decoration: none; font-weight: bold; }
-        a:hover { text-decoration: underline; }
-        
-        /* 📊 Fiyat Tablosu Stilleri */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            font-size: 15px;
-        }
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        th { background-color: #f8f9fa; color: #222; }
-        tr:hover { background-color: #fdfdfd; }
-        
-        /* ❓ SSS Stilleri */
-        .faq-section { margin-top: 35px; }
-        .faq-item {
-            margin-bottom: 15px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
-        }
-        .faq-item h4 { margin: 0 0 8px 0; color: #222; font-size: 16px; }
-        .faq-item p { margin: 0; color: #555; font-size: 14px; line-height: 1.5; }
-    </style>
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+  <!-- Loading Animation -->
+  <div id="loader" aria-hidden="true"><div class="loader-spinner"></div></div>
 
-    <div class="container">
-        <div class="header-box">
-            <h2>ExpressGo Moto Kurye İstanbul</h2>
-            <p><div class="loader"></div> Ana hizmet merkezimize yönlendiriliyorsunuz...</p>
-            <p style="font-size: 13px; color: #666;">
-                Beklemek istemiyorsanız doğrudan <a href="https://kuryeexpressgo.com">kuryeexpressgo.com</a> adresini ziyaret edebilirsiniz.
-            </p>
+  <!-- Sticky Navigation -->
+  <header class="sticky-nav" role="banner">
+    <div class="container nav-container">
+      <div class="logo">
+        <a href="#" aria-label="ExpressGo Kurye Ana Sayfa">
+          <span class="logo-yellow">Express</span><span class="logo-black">Go</span>
+          <span class="logo-kurye">Kurye</span>
+        </a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menüyü aç/kapat">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Ana menü">
+        <ul>
+          <li><a href="#about">Hakkımızda</a></li>
+          <li><a href="#services">Hizmetler</a></li>
+          <li><a href="#areas">Hizmet Bölgeleri</a></li>
+          <li><a href="#pricing">Fiyat Tablosu</a></li>
+          <li><a href="#faq">SSS</a></li>
+          <li><a href="#contact">İletişim</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>İstanbul'un En Hızlı Moto Kurye'si</h1>
+          <p class="hero-sub">Acil, evrak, kurumsal ve moto kurye ihtiyaçlarınız için 7/24 yanınızdayız.</p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">Hemen Teklif Al</a>
+            <a href="#services" class="btn btn-secondary">Hizmetlerimiz</a>
+          </div>
+          <div class="hero-stats">
+            <div><span class="stat-number" data-target="1250">0</span><span>+ Mutlu Müşteri</span></div>
+            <div><span class="stat-number" data-target="4800">0</span><span>+ Teslimat</span></div>
+            <div><span class="stat-number" data-target="24">0</span><span>/7 Hizmet</span></div>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <hr style="border: 0; border-top: 1px solid #eee;">
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2>Hakkımızda</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p><strong>ExpressGo Kurye</strong> olarak 2018 yılından bu yana İstanbul'un her ilçesinde profesyonel moto kurye hizmeti sunuyoruz. Müşteri memnuniyetini ön planda tutarak, acil kurye, evrak teslimi ve kurumsal lojistik çözümleriyle fark yaratıyoruz.</p>
+            <p>Deneyimli ekibimiz ve teknoloji altyapımız sayesinde teslimatlarınızı güvenle, zamanında ve ekonomik fiyatlarla gerçekleştiriyoruz. İstanbul trafiğinde en kısa rotaları biliyor, her türlü teslimatı profesyonelce yönetiyoruz.</p>
+            <ul class="benefit-list">
+              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F5B300" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> %100 Güvenilir Teslimat</li>
+              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F5B300" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Anlık Takip</li>
+              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F5B300" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Uygun Fiyat Politikası</li>
+            </ul>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card"><span class="stat-number" data-target="7">0</span><p>Yıl Deneyim</p></div>
+            <div class="stat-card"><span class="stat-number" data-target="150">0</span><p>+ Araç</p></div>
+            <div class="stat-card"><span class="stat-number" data-target="99">0</span><p>% Memnuniyet</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <h3>💰 İstanbul Moto Kurye Fiyat Listesi</h3>
-        <p style="font-size: 14px; color: #666;">Mesafe ve bölgeye göre tahmini başlangıç fiyat tarifelerimiz aşağıdadır. Net fiyat için lütfen ana sitemizden bilgi alınız.</p>
-        <table>
-            <thead>
-                <tr>
-                    <th>Hizmet Bölgesi</th>
-                    <th>Kurye Tipi</th>
-                    <th>Ort. Teslimat Süresi</th>
-                    <th>Başlangıç Fiyatı</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Şişli / Mecidiyeköy</strong></td>
-                    <td>Normal Kurye / Vale</td>
-                    <td>30-60 Dk</td>
-                    <td><a href="https://kuryeexpressgo.com">Fiyat Al</a></td>
-                </tr>
-                <tr>
-                    <td><strong>İkitelli OSB / Başakşehir</strong></td>
-                    <td>Express / Sanayi Dağıtım</td>
-                    <td>45-90 Dk</td>
-                    <td><a href="https://kuryeexpressgo.com">Fiyat Al</a></td>
-                </tr>
-                <tr>
-                    <td><strong>Esenyurt / Beylikdüzü</strong></td>
-                    <td>Motorlu Kurye / Acil</td>
-                    <td>60-120 Dk</td>
-                    <td><a href="https://kuryeexpressgo.com">Fiyat Al</a></td>
-                </tr>
-                <tr>
-                    <td><strong>Şehirler Arası</strong></td>
-                    <td>VIP / Özel Dağıtım</td>
-                    <td>Aynı Gün</td>
-                    <td><a href="https://kuryeexpressgo.com">Teklif Al</a></td>
-                </tr>
-            </tbody>
-        </table>
+    <!-- SERVICES -->
+    <section id="services" class="services">
+      <div class="container">
+        <h2>Hizmetlerimiz</h2>
+        <div class="service-grid">
+          <div class="service-card">
+            <div class="service-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F5B300" stroke-width="1.5"><path d="M3 12h18M3 8h18M3 16h18"/><circle cx="6" cy="6" r="1.5"/><circle cx="18" cy="6" r="1.5"/><circle cx="6" cy="18" r="1.5"/><circle cx="18" cy="18" r="1.5"/></svg></div>
+            <h3>Moto Kurye</h3>
+            <p>İstanbul genelinde motosikletli kurye hizmeti. Hızlı, çevik ve ekonomik teslimat.</p>
+            <a href="https://kuryeexpressgo.com/moto-kurye/" target="_blank" rel="noopener">Detaylar →</a>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F5B300" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+            <h3>Acil Kurye</h3>
+            <p>Öncelikli ve zaman kritik teslimatlarınız için acil kurye desteği.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F5B300" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M8 4v16M16 4v16"/></svg></div>
+            <h3>Evrak Kurye</h3>
+            <p>Resmi evrak, sözleşme, fatura ve belgelerinizin güvenli teslimatı.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F5B300" stroke-width="1.5"><path d="M12 2v20M4 6h16M4 18h16"/></svg></div>
+            <h3>Kurumsal Kurye</h3>
+            <p>İşletmelere özel düzenli kurye hizmetleri ve lojistik çözümler.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F5B300" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+            <h3>İstanbul Moto Kurye</h3>
+            <p>İstanbul'un tüm semtlerine hızlı ve güvenilir moto kurye çözümleri.</p>
+            <a href="https://kuryeexpressgo.com/moto-kurye/" target="_blank" rel="noopener">Detaylar →</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <div class="faq-section">
-            <h3>❓ Sıkça Sorulan Sorular (SSS)</h3>
-            
-            <div class="faq-item">
-                <h4>1. Moto kurye fiyatları neye göre belirlenir?</h4>
-                <p>İstanbul genelinde <a href="https://kuryeexpressgo.com">moto kurye fiyatları</a>, gönderinin teslim alınacağı ilçe ile teslim edileceği adres arasındaki toplam mesafeye (km), hava şartlarına ve seçeceğiniz kurye modeline (Normal, Ekspres, VIP Vale) göre hesaplanır.</p>
+    <!-- SERVICE AREAS -->
+    <section id="areas" class="areas">
+      <div class="container">
+        <h2>Hizmet Bölgeleri</h2>
+        <div class="areas-grid">
+          <a href="https://kuryeexpressgo.com/esenyurt-acil-kurye/" target="_blank" rel="noopener" class="area-card">Esenyurt</a>
+          <a href="https://kuryeexpressgo.com/bahcesehir-moto-kurye/" target="_blank" rel="noopener" class="area-card">Bahçeşehir</a>
+          <a href="https://kuryeexpressgo.com/ikitelli-moto-kurye/" target="_blank" rel="noopener" class="area-card">İkitelli</a>
+          <a href="#" class="area-card">Başakşehir</a>
+          <a href="#" class="area-card">Beylikdüzü</a>
+          <a href="#" class="area-card">Avcılar</a>
+          <a href="#" class="area-card">Merter</a>
+          <a href="#" class="area-card">Şişli</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING TABLE -->
+    <section id="pricing" class="pricing">
+      <div class="container">
+        <h2>Kurye Fiyat Tablosu</h2>
+        <div class="pricing-table">
+          <div class="pricing-item"><span>Asgari Ücret (5 km)</span><span>₺120</span></div>
+          <div class="pricing-item"><span>5-10 km arası</span><span>₺150</span></div>
+          <div class="pricing-item"><span>10-20 km arası</span><span>₺200</span></div>
+          <div class="pricing-item"><span>20+ km</span><span>₺250+</span></div>
+          <div class="pricing-item"><span>Acil Kurye (extra)</span><span>+₺50</span></div>
+        </div>
+        <p class="pricing-note">*Tüm fiyatlar KDV dahildir. Kurumsal müşterilerimize özel indirimler mevcuttur.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+      <div class="container">
+        <h2>Sık Sorulan Sorular</h2>
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question">ExpressGo Kurye hangi bölgelerde hizmet veriyor?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>Esenyurt, Bahçeşehir, İkitelli, Başakşehir, Beylikdüzü, Avcılar, Merter, Şişli ve tüm İstanbul genelinde 7/24 hizmet vermekteyiz.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Acil kurye hizmetiniz var mı?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>Evet, acil kurye hizmetimiz mevcuttur. İstanbul'un her noktasına en hızlı şekilde ulaşarak teslimatınızı gerçekleştiririz.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Fiyatlandırma nasıl yapılıyor?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>Fiyatlar mesafe ve teslimat türüne göre değişir. Yukarıdaki fiyat tablosundan detaylı bilgi alabilirsiniz.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Kurumsal anlaşma yapabiliyor musunuz?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>Evet, kurumsal firmalara özel indirimli paketler ve düzenli teslimat hizmetleri sunuyoruz. İletişim sayfasından bize ulaşabilirsiniz.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>İletişim</h2>
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <p><strong>Telefon:</strong> <a href="tel:+905421073826">+90 542 107 38 26</a></p>
+            <p><strong>E-posta:</strong> <a href="mailto:info@kuryeexpressgo.com">info@kuryeexpressgo.com</a></p>
+            <p><strong>Adres:</strong> İstanbul / Türkiye</p>
+            <div class="social-links">
+              <a href="#" aria-label="Instagram"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17" cy="7" r="1.5"/></svg></a>
+              <a href="#" aria-label="Facebook"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
             </div>
+          </div>
+          <form class="contact-form" netlify>
+            <input type="text" placeholder="Adınız" required>
+            <input type="email" placeholder="E-posta" required>
+            <input type="tel" placeholder="Telefon">
+            <textarea rows="4" placeholder="Mesajınız" required></textarea>
+            <button type="submit" class="btn btn-primary">Gönder</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
-            <div class="faq-item">
-                <h4>2. İkitelli ve Şişli gibi yoğun bölgelerde teslimat süresi nedir?</h4>
-                <p>İş trafiğinin yoğun olduğu İkitelli Organize Sanayi veya Şişli lokasyonlarında, <a href="https://kuryeexpressgo.com">ExpressGo motorlu kurye</a> ağımız sayesinde gönderileriniz ekspres seçenekle 45 dakika içinde adrese ulaştırılır.</p>
-            </div>
+  <!-- FOOTER -->
+  <footer class="dark-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4>ExpressGo Kurye</h4>
+        <p>İstanbul'un güvenilir moto kurye ve acil teslimat adresi.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Hızlı Linkler</h4>
+        <ul>
+          <li><a href="#about">Hakkımızda</a></li>
+          <li><a href="#services">Hizmetler</a></li>
+          <li><a href="#pricing">Fiyatlar</a></li>
+          <li><a href="#faq">SSS</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Bölgeler</h4>
+        <ul>
+          <li><a href="https://kuryeexpressgo.com/esenyurt-acil-kurye/" target="_blank">Esenyurt</a></li>
+          <li><a href="https://kuryeexpressgo.com/bahcesehir-moto-kurye/" target="_blank">Bahçeşehir</a></li>
+          <li><a href="https://kuryeexpressgo.com/ikitelli-moto-kurye/" target="_blank">İkitelli</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>İletişim</h4>
+        <p><a href="tel:+905421073826">+90 542 107 38 26</a></p>
+        <p><a href="mailto:info@kuryeexpressgo.com">info@kuryeexpressgo.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 ExpressGo Kurye — Tüm hakları saklıdır.</p></div>
+  </footer>
 
-            <div class="faq-item">
-                <h4>3. Gece kurye veya vale hizmetiniz var mı?</h4>
-                <p>Evet, İstanbul'un her iki yakasında da 7 gün 24 saat kesintisiz <a href="https://kuryeexpressgo.com">vale kurye</a> ve gece motorlu dağıtım hizmetimiz mevcuttur. Güncel gece tarifeleri ve nöbetçi kurye desteği için ana sitemiz üzerinden çağrı merkezimize ulaşabilirsiniz.</p>
+  <!-- Floating WhatsApp & Call -->
+  <div class="floating-buttons">
+    <a href="https://wa.me/905421073826" target="_blank" class="whatsapp" aria-label="WhatsApp"><svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+    <a href="tel:+905421073826" class="call" aria-label="Ara"><svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></a>
+  </div>
+
+  <!-- Back to Top -->
+  <button id="backToTop" aria-label="Yukarı çık">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
+```
