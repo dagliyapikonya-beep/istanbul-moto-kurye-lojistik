@@ -30,3 +30,24 @@ Resmi web sitesi:
 📍 Esenyurt Moto Kurye
 
 [Esenyurt Acil Kurye Hizmeti](https://kuryeexpressgo.com/esenyurt-acil-kurye/)
+---
+
+## Diğer Bölgeler
+
+- [Bahçeşehir Moto Kurye](bahcesehir-moto-kurye.md)
+- [Beylikdüzü Moto Kurye](beylikduzu-moto-kurye.md)
+- [Avcılar Moto Kurye](avcilar-moto-kurye.md)
+- [Başakşehir Moto Kurye](basaksehir-moto-kurye.md)
+- [İkitelli Moto Kurye](ikitelli-moto-kurye.md)
+- [Güneşli Moto Kurye](gunesli-moto-kurye.md)
+- [Merter Moto Kurye](merter-moto-kurye.md)
+
+## Hizmetler
+
+- [Moto Kurye](moto-kurye.md)
+- [Acil Kurye](acil-kurye.md)
+- [Evrak Kurye](evrak-kurye.md)
+
+## Resmi Web Sitesi
+
+https://kuryeexpressgo.com
